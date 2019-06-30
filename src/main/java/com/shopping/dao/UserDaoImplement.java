@@ -2,7 +2,9 @@ package com.shopping.dao;
 
 import com.shopping.entity.User;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
@@ -22,6 +24,7 @@ public class UserDaoImplement implements UserDao {
         String hql = "from User where id=?";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
         query.setParameter(0, id);
+
         return (User)query.uniqueResult();
     }
 
@@ -40,26 +43,41 @@ public class UserDaoImplement implements UserDao {
 
     @Override
     public void addUser(User user) {
-        sessionFactory.getCurrentSession().save(user);
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+        session.save(user);
+        transaction.commit();
+        session.close();
     }
 
     @Override
     public boolean deleteUser(int id) {
+        Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
         String hql = "delete User where id=?";
-        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        Query query = session.createQuery(hql);
         query.setParameter(0, id);
-        return query.executeUpdate() > 0;
+        int isDelete = query.executeUpdate();
+        transaction.commit();
+        session.close();
+        return isDelete > 0;
     }
 
     @Override
     public boolean updateUser(User user) {
-        String hql = "update User set name = ?,email=?,nickName=? where id=?";
-        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        Session session = sessionFactory.openSession();
+        Transaction   transaction = session.beginTransaction();
+        String hql = "update User set name = ?,email=?,nickName=? ,role=? where id=?";
+        Query query = session.createQuery(hql);
         query.setParameter(0,user.getName());
         query.setParameter(1,user.getEmail());
         query.setParameter(2,user.getNickName());
-        query.setParameter(3,user.getId());
-        return query.executeUpdate() > 0;
+        query.setParameter(3,user.getRole());
+        query.setParameter(4,user.getId());
+        int isUpdate = query.executeUpdate();
+        transaction.commit();
+        session.close();
+        return isUpdate>0;
     }
 
     @Override
