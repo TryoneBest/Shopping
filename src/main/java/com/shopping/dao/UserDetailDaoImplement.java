@@ -26,8 +26,24 @@ public class UserDetailDaoImplement implements UserDetailDao{
     }
 
     @Override
-    public void addUserDetail(UserDetail userDetail) {
-        sessionFactory.getCurrentSession().save(userDetail);
+    public boolean addUserDetail(UserDetail userDetail) {
+        if(userDetail.getBirthday() == null || userDetail.getPostNumber() == null || userDetail.getPhoneNumber() == null
+            || userDetail.getPassword() == null || userDetail.getAddress() == null || userDetail.getRegisterTime() == null){
+            return false;
+        }else{
+            String hql = "from UserDetail where id=?";
+            String hql1 = "from User where id=?";
+            Query query = sessionFactory.getCurrentSession().createQuery(hql);
+            Query query1 = sessionFactory.getCurrentSession().createQuery(hql1);
+            query.setParameter(0, userDetail.getId());
+            query1.setParameter(0, userDetail.getId());
+            if(query.uniqueResult() != null || query1.uniqueResult() == null){
+                return false;
+            }else{
+                sessionFactory.getCurrentSession().save(userDetail);
+                return true;
+            }
+        }
     }
 
     @Override

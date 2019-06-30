@@ -11,7 +11,7 @@ public interface UserDetailDao {
 
     public UserDetail getUserDetail(int id);
 
-    public void addUserDetail(UserDetail userDetail);
+    public boolean addUserDetail(UserDetail userDetail);
 
     public boolean deleteUserDetail(int id);
 
