@@ -1,5 +1,6 @@
 package com.shopping.service;
 
+import com.shopping.dao.UserDetailDao;
 import com.shopping.entity.UserDetail;
 
 import java.util.List;
@@ -8,9 +9,11 @@ import java.util.List;
  * Created by 14437 on 2017/3/1.
  */
 public interface UserDetailService {
+    public  void setUserDetailDao(UserDetailDao userDetailDao);
+
     public UserDetail getUserDetail(int id);
 
-    public void addUserDetail(UserDetail userDetail);
+    public boolean addUserDetail(UserDetail userDetail);
 
     public boolean deleteUserDetail(int id);
 

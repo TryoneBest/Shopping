@@ -1,19 +1,17 @@
 package com.shopping.dao;
 
 import com.shopping.entity.UserDetail;
+import java.util.List;
+import javax.annotation.Resource;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
-
-import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * Created by 14437 on 2017/3/1.
  */
 @Repository
 public class UserDetailDaoImplement implements UserDetailDao{
-
     @Resource
     private SessionFactory sessionFactory;
 
