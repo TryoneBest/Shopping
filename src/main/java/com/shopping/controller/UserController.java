@@ -151,7 +151,7 @@ public class UserController {
     @RequestMapping(value = "/doUpdate", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> doUpdate(String userName, String email, String nickName, String password, String phoneNumber, int sex, String birthday, String postNumber, String address) {
-        try{
+        //try{
             String result = "fail";
             User user = userService.getUser(userName);
             user.setEmail(email);
@@ -182,7 +182,7 @@ public class UserController {
             resultMap.put("result",result);
             resultMap.put("exception", e.getClass().getName());
             return resultMap;
-        }
+        }*/
     }
 
     @RequestMapping(value = "/getAllUser", method = RequestMethod.POST)
