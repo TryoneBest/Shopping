@@ -66,31 +66,31 @@ public class UserDaoImplement implements UserDao {
 
     @Override
     public boolean deleteUser(int id) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        String hql = "delete User where id=?";
-        Query query = session.createQuery(hql);
-        query.setParameter(0, id);
-        int isDelete = query.executeUpdate();
-        transaction.commit();
-        session.close();
-        return isDelete > 0;
+        String hql1 = "from User where id=?";
+        Query query1 = sessionFactory.getCurrentSession().createQuery(hql1);
+        query1.setParameter(0,id);
+        if(query1.uniqueResult()==null)
+            return false;
+        else{
+            String hql = "delete User where id=?";
+            Query  query = sessionFactory.getCurrentSession().createQuery(hql);
+            query.setParameter(0,id);
+            int isDelte = query.executeUpdate();
+            return isDelte>0;
+        }
+
     }
 
     @Override
     public boolean updateUser(User user) {
-        Session session = sessionFactory.openSession();
-        Transaction   transaction = session.beginTransaction();
         String hql = "update User set name = ?,email=?,nickName=? ,role=? where id=?";
-        Query query = session.createQuery(hql);
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
         query.setParameter(0,user.getName());
         query.setParameter(1,user.getEmail());
         query.setParameter(2,user.getNickName());
         query.setParameter(3,user.getRole());
         query.setParameter(4,user.getId());
         int isUpdate = query.executeUpdate();
-        transaction.commit();
-        session.close();
         return isUpdate>0;
     }
 
