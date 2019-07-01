@@ -2,6 +2,7 @@ package com.shopping.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.shopping.entity.User;
 import com.shopping.entity.UserDetail;
 import com.shopping.service.UserDetailService;
@@ -31,6 +32,8 @@ public class UserController {
     @Resource
     UserDetailService userDetailService;
 
+    public  void reset(UserService userService){this.userService=userService;}
+    public  void reset(UserDetailService userDetailService){this.userDetailService = userDetailService;}
 
     @RequestMapping(value = "/register")
     public String register() {
@@ -99,8 +102,10 @@ public class UserController {
                 user1.setNickName(nickName);
                 System.out.println(nickName);
                 user1.setRole(0);
-                userService.addUser(user1);
-                user1 = userService.getUser(userName);
+                if(!userService.addUser(user1))
+                    result = "failed";
+                else result = "success";
+                //user1 = userService.getUser(userName);
                 UserDetail userDetail = new UserDetail();
                 userDetail.setId(user1.getId());
                 userDetail.setAddress(address);
@@ -112,8 +117,11 @@ public class UserController {
                 Date date = new Date();
                 SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 userDetail.setRegisterTime(sf.format(date));
-                userDetailService.addUserDetail(userDetail);
-                result = "success";
+                if(userDetailService.addUserDetail(userDetail))
+                    result="failed";
+                else
+                    result = "success";
+                //result = "success";
             }
         }
         Map<String, Object> resultMap = new HashMap<String, Object>();
@@ -124,23 +132,35 @@ public class UserController {
     @RequestMapping(value = "/doUpdate", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> doUpdate(String userName, String email, String nickName, String password, String phoneNumber, int sex, String birthday, String postNumber, String address) {
-        String result = "fail";
-        User user = userService.getUser(userName);
-        user.setEmail(email);
-        user.setNickName(nickName);
-        userService.updateUser(user);
-        UserDetail userDetail = userDetailService.getUserDetail(user.getId());
-        userDetail.setAddress(address);
-        userDetail.setBirthday(birthday);
-        userDetail.setPassword(password);
-        userDetail.setPhoneNumber(phoneNumber);
-        userDetail.setSex(sex);
-        userDetail.setPostNumber(postNumber);
-        userDetailService.updateUserDetail(userDetail);
-        result = "success";
-        Map<String, Object> resultMap = new HashMap<String, Object>();
-        resultMap.put("result", result);
-        return resultMap;
+        try{
+            String result = "fail";
+            User user = userService.getUser(userName);
+            user.setEmail(email);
+            user.setNickName(nickName);
+            if(!userService.updateUser(user)){
+                result="failed";
+            }
+            else{
+                result="success";
+            }
+            UserDetail userDetail = userDetailService.getUserDetail(user.getId());
+            userDetail.setAddress(address);
+            userDetail.setBirthday(birthday);
+            userDetail.setPassword(password);
+            userDetail.setPhoneNumber(phoneNumber);
+            userDetail.setSex(sex);
+            userDetail.setPostNumber(postNumber);
+            userDetailService.updateUserDetail(userDetail);
+            //result = "success";
+            Map<String, Object> resultMap = new HashMap<String, Object>();
+            resultMap.put("result", result);
+            return resultMap;
+        }catch (AssertionError e){
+            String result = "failed";
+            Map<String,Object> resultMap = new HashMap<>();
+            resultMap.put("result",result);
+            return resultMap;
+        }
     }
 
     @RequestMapping(value = "/getAllUser", method = RequestMethod.POST)
@@ -149,7 +169,7 @@ public class UserController {
 //        System.out.println("我接收到了获取用户请求");
         List<User> userList = new ArrayList<>();
         userList = userService.getAllUser();
-        String allUsers = JSONArray.toJSONString(userList);
+        String allUsers = JSONArray.toJSONString(userList, SerializerFeature.WriteMapNullValue);
 //        System.out.println("我返回的结果是"+allUsers);
         Map<String,Object> resultMap = new HashMap<String,Object>();
         resultMap.put("allUsers",allUsers);
@@ -192,7 +212,7 @@ public class UserController {
 
     @RequestMapping(value = "/getUserDetailById", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> getUserDetailById(int id) {
+        public Map<String, Object> getUserDetailById(int id) {
         UserDetail userDetail = userDetailService.getUserDetail(id);
         String result = JSON.toJSONString(userDetail);
         Map<String,Object> resultMap = new HashMap<String,Object>();
