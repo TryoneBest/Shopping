@@ -3,11 +3,8 @@ package com.shopping.controller;
 import com.shopping.entity.User;
 import com.shopping.entity.UserDetail;
 import com.shopping.service.UserDetailService;
-import com.shopping.service.UserDetailServiceImplement;
 import com.shopping.service.UserService;
-import com.shopping.service.UserServiceImplement;
 import com.shopping.utils.Response;
-import com.sun.org.apache.regexp.internal.RE;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,15 +13,10 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.transaction.annotation.Transactional;
-import sun.awt.windows.WEmbeddedFrame;
-
-import javax.servlet.http.HttpSession;
 
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.floatThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 

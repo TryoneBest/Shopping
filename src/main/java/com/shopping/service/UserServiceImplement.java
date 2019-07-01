@@ -2,7 +2,6 @@ package com.shopping.service;
 
 import com.shopping.dao.*;
 import com.shopping.entity.User;
-import com.shopping.entity.UserDetail;
 import com.shopping.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
