@@ -98,6 +98,7 @@ public class UserControllerTest {
             System.out.println("failed");
         }
     }
+    /*
     @Test
     public void BACK_001_DRC_001_04(){
         userController.reset(mockUserService);
@@ -114,16 +115,16 @@ public class UserControllerTest {
         }catch (AssertionError A){
             System.out.println("failed");
         }
-    }
+    }*/
 
     @Test
     public void BACK_001_DUC_001_01(){
         userController.reset(mockUserService);
         userController.reset(mockuserDetailService);
-        user1.setNickName("M");user1.setName("mumu");user1.setId(1);
+        user1.setNickName("M");user1.setName("mumu");user1.setId(1);user1.setEmail("987@163.com");
         userDetail.setId(1);userDetail.setAddress("湖北省荆门市京山区");userDetail.setBirthday("1999.5.8");userDetail.setPassword("a123456");userDetail.setPhoneNumber("18716549852");userDetail.setPostNumber("654236");userDetail.setSex(1);userDetail.setRegisterTime("2019.6.30 20:30:36");
         when(mockUserService.updateUser(user1)).thenReturn(true);
-        when(mockUserService.getUser("mumu")).thenReturn(new User(1,"test","test","test",4));
+        when(mockUserService.getUser("mumu")).thenReturn(user1);
         when(mockuserDetailService.getUserDetail(1)).thenReturn(userDetail);
         when(mockuserDetailService.updateUserDetail(userDetail)).thenReturn(true);
         try{
@@ -139,7 +140,7 @@ public class UserControllerTest {
         userController.reset(mockuserDetailService);
         user1.setNickName("M");user1.setName("nunu");user1.setId(5);
         userDetail.setId(5);userDetail.setAddress("湖北省荆门市京山区");userDetail.setBirthday("1999.5.8");userDetail.setPassword("a123456");userDetail.setPhoneNumber("18716549852");userDetail.setPostNumber("654236");userDetail.setSex(1);userDetail.setRegisterTime("2019.6.30 20:30:36");
-        when(mockUserService.getUser("nunu")).thenReturn(new User(5,"test","test","Test",1));
+        when(mockUserService.getUser("nunu")).thenReturn(user1);
         when(mockUserService.updateUser(user1)).thenReturn(false);
         when(mockuserDetailService.getUserDetail(5)).thenReturn(new UserDetail());
         when(mockuserDetailService.updateUserDetail(userDetail)).thenReturn(false);
@@ -156,7 +157,7 @@ public class UserControllerTest {
         userController.reset(mockuserDetailService);
         user1.setId(5);user1.setName("mumu");user1.setNickName("M");
         userDetail.setId(5);userDetail.setAddress("湖北省荆门市京山区");userDetail.setBirthday("1999.5.8");userDetail.setPassword("a123456");userDetail.setPhoneNumber("18716549852");userDetail.setPostNumber("654236");userDetail.setSex(1);userDetail.setRegisterTime("2019.6.30 20:30:36");
-        when(mockUserService.getUser("mumu")).thenReturn(new User(5,"test","test","test",1));
+        when(mockUserService.getUser("mumu")).thenReturn(user1);
         when(mockUserService.updateUser(user1)).thenReturn(false);
         when(mockuserDetailService.getUserDetail(5)).thenReturn(new UserDetail());
         when(mockuserDetailService.updateUserDetail(userDetail)).thenReturn(true);

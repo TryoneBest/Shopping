@@ -67,4 +67,27 @@ public class User {
     public void setRole(int role) {
         this.role = role;
     }
+
+
+    public User(int id,String name,String email,String nickName,int role){
+        this.id=id;this.name=name;this.nickName=nickName;this.email=email;this.role=role;
+    }
+
+    public User(){
+
+    }
+
+    public boolean equals(Object obj){
+        if(this ==obj)
+            return true;
+        if(obj==null)
+            return  false;
+        if(getClass()!=obj.getClass())
+            return false;
+        User other = (User)obj;
+        if(name.equals(other.name)&&nickName.equals(other.nickName)&&email.equals(other.email)&&role==other.role)
+            return true;
+        else
+            return false;
+    }
 }
