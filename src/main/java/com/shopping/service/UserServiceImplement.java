@@ -27,6 +27,11 @@ public class UserServiceImplement implements UserService {
     @Autowired
     private EvaluationDao evaluationDao;
 
+    public void reset(UserDao userDao){this.userDao = userDao;}
+    public void reset(UserDetailDao userDetailDao){this.userDetailDao = userDetailDao;}
+    public void reset(ShoppingRecordDao shoppingRecordDao){this.shoppingRecordDao = shoppingRecordDao;}
+    public void reset(ShoppingCarDao shoppingCarDao){this.shoppingCarDao = shoppingCarDao;}
+    public void reset(EvaluationDao evaluationDao){this.evaluationDao=evaluationDao;}
     @Override
     public User getUser(int id) {
         return userDao.getUser(id);
@@ -38,8 +43,8 @@ public class UserServiceImplement implements UserService {
     }
 
     @Override
-    public void addUser(User user) {
-        userDao.addUser(user);
+    public boolean addUser(User user) {
+        return userDao.addUser(user);
     }
 
     //推荐写法，具体业务逻辑放在Service实现方法里面
@@ -53,6 +58,8 @@ public class UserServiceImplement implements UserService {
             shoppingRecordDao.deleteShoppingRecordByUser(id);
             userDetailDao.deleteUserDetail(id);
             userDao.deleteUser(id);
+            if(!evaluationDao.deleteEvaluationByUser(id)||!shoppingCarDao.deleteShoppingCarByUser(id)||!shoppingRecordDao.deleteShoppingRecordByUser(id)||!userDetailDao.deleteUserDetail(id)||!userDao.deleteUser(id))
+                return new Response(0,"删除失败",null);
             return new Response(1, "删除成功", null);
         }catch (Exception e) {
             return new Response(0, "删除失败", null);

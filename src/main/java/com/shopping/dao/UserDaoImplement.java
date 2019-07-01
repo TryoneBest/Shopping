@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
+import javax.lang.model.element.NestingKind;
 import java.util.List;
 
 /**
@@ -42,12 +43,25 @@ public class UserDaoImplement implements UserDao {
     }
 
     @Override
-    public void addUser(User user) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-        session.save(user);
-        transaction.commit();
-        session.close();
+    public boolean addUser(User user) {
+        String hql = "from User where id=?";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        query.setParameter(0,user.getId());
+        String hql1 = "from User where name=?";
+        Query query1 = sessionFactory.getCurrentSession().createQuery(hql1);
+        query1.setParameter(0,user.getName());
+        String hql2 = "from User where email = ?";
+        Query query2 = sessionFactory.getCurrentSession().createQuery(hql2);
+        query2.setParameter(0,user.getEmail());
+        if((query.uniqueResult()!=null)||(query1.uniqueResult()!=null)||(query2.uniqueResult()!=null)){
+            return false;
+        }else if((user.getName()==null)||user.getEmail()==null){
+            return false;
+        }else{
+            sessionFactory.getCurrentSession().save(user);
+            return true;
+        }
+
     }
 
     @Override

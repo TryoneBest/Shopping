@@ -13,7 +13,7 @@ public interface UserService {
 
     User getUser(String nameOrEmail);
 
-    void addUser(User user);
+    boolean addUser(User user);
 
     //推荐写法
     Response deleteUser(int id);

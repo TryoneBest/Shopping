@@ -13,7 +13,7 @@ public interface UserDao {
 
     public User getUser(String nameOrEmail);
 
-    public void addUser(User user);
+    public boolean addUser(User user);
 
     public boolean deleteUser(int id);
 
