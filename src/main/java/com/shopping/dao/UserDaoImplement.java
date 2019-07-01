@@ -66,14 +66,10 @@ public class UserDaoImplement implements UserDao {
 
     @Override
     public boolean deleteUser(int id) {
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
         String hql = "delete User where id=?";
-        Query query = session.createQuery(hql);
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
         query.setParameter(0, id);
         int isDelete = query.executeUpdate();
-        transaction.commit();
-        session.close();
         return isDelete > 0;
     }
 

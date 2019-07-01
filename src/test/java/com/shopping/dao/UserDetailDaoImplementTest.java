@@ -199,8 +199,8 @@ public class UserDetailDaoImplementTest {
         update.setBirthday("1966.10.8");
         update.setPostNumber("325621");
         update.setRegisterTime("2019.6.30 22：52");
+        boolean result = userDetail.updateUserDetail(update);
         try{
-            boolean result = userDetail.updateUserDetail(update);
             assertTrue(result);
             System.out.println("success");
         }catch (Exception e){

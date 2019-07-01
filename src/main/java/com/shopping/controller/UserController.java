@@ -84,15 +84,21 @@ public class UserController {
     @RequestMapping(value = "/doRegister", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> doRegister(String userName, String email, String nickName, String password, String phoneNumber, int sex, String birthday, String postNumber, String address) {
-
+        Map<String, Object> resultMap = new HashMap<String, Object>();
+        boolean result_tag = true;
         String result = "fail";
         User user = userService.getUser(userName);
         if (user != null) {
             result = "nameExist";
+            //resultMap.put("result", result);
+            //return resultMap;
         } else {
             user = userService.getUser(email);
-            if (user != null)
+            if (user != null){
                 result = "emailExist";
+                //resultMap.put("result", result);
+                //return resultMap;
+            }
             else {
                 User user1 = new User();
                 user1.setName(userName);
@@ -102,29 +108,42 @@ public class UserController {
                 user1.setNickName(nickName);
                 System.out.println(nickName);
                 user1.setRole(0);
-                if(!userService.addUser(user1))
-                    result = "failed";
-                else result = "success";
-                //user1 = userService.getUser(userName);
-                UserDetail userDetail = new UserDetail();
-                userDetail.setId(user1.getId());
-                userDetail.setAddress(address);
-                userDetail.setBirthday(birthday);
-                userDetail.setPassword(password);
-                userDetail.setPhoneNumber(phoneNumber);
-                userDetail.setSex(sex);
-                userDetail.setPostNumber(postNumber);
-                Date date = new Date();
-                SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                userDetail.setRegisterTime(sf.format(date));
-                if(userDetailService.addUserDetail(userDetail))
-                    result="failed";
-                else
-                    result = "success";
+                //user1.setId(6);
+                //User user2 = new User();
+                //System.out.println("userid:" + user2.getId());
+                try{
+                    result_tag = userService.addUser(user1);
+                    if(!result_tag)
+                        result = "add user failed";
+                    else {
+                        user1 = userService.getUser(userName);
+                        UserDetail userDetail = new UserDetail();
+                        userDetail.setId(user1.getId());
+                        userDetail.setAddress(address);
+                        userDetail.setBirthday(birthday);
+                        userDetail.setPassword(password);
+                        userDetail.setPhoneNumber(phoneNumber);
+                        userDetail.setSex(sex);
+                        userDetail.setPostNumber(postNumber);
+                        Date date = new Date();
+                        SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                        userDetail.setRegisterTime(sf.format(date));
+                        try{
+                            result_tag = userDetailService.addUserDetail(userDetail);
+                            if(!result_tag)
+                                result="user detail failed";
+                            else
+                                result = "success";
+                        }catch (Exception e){
+                            result="user detail failed";
+                        }
+                    }
+                }catch (Exception e){
+                    result = "add user failed";
+                }
                 //result = "success";
             }
         }
-        Map<String, Object> resultMap = new HashMap<String, Object>();
         resultMap.put("result", result);
         return resultMap;
     }
@@ -138,27 +157,30 @@ public class UserController {
             user.setEmail(email);
             user.setNickName(nickName);
             if(!userService.updateUser(user)){
-                result="failed";
+                result="update user failed";
             }
             else{
-                result="success";
+                UserDetail userDetail = userDetailService.getUserDetail(user.getId());
+                userDetail.setAddress(address);
+                userDetail.setBirthday(birthday);
+                userDetail.setPassword(password);
+                userDetail.setPhoneNumber(phoneNumber);
+                userDetail.setSex(sex);
+                userDetail.setPostNumber(postNumber);
+                if(!userDetailService.updateUserDetail(userDetail))
+                    result="update user detail failed";
+                else
+                    result="success";
             }
-            UserDetail userDetail = userDetailService.getUserDetail(user.getId());
-            userDetail.setAddress(address);
-            userDetail.setBirthday(birthday);
-            userDetail.setPassword(password);
-            userDetail.setPhoneNumber(phoneNumber);
-            userDetail.setSex(sex);
-            userDetail.setPostNumber(postNumber);
-            userDetailService.updateUserDetail(userDetail);
-            //result = "success";
             Map<String, Object> resultMap = new HashMap<String, Object>();
             resultMap.put("result", result);
             return resultMap;
-        }catch (AssertionError e){
-            String result = "failed";
+        }catch (Exception e){
+            e.printStackTrace();
+            String result = "exception  failed";
             Map<String,Object> resultMap = new HashMap<>();
             resultMap.put("result",result);
+            resultMap.put("exception", e.getClass().getName());
             return resultMap;
         }
     }
@@ -180,18 +202,24 @@ public class UserController {
     @RequestMapping(value = "/deleteUser", method = RequestMethod.POST)
     @ResponseBody
     public Response deleteUser(int id) {
+        System.out.println(id);
         return userService.deleteUser(id);
     }
 
     @RequestMapping(value = "/getUserAddressAndPhoneNumber", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> getUserAddressAndPhoneNumber(int id) {
-        String address = userDetailService.getUserDetail(id).getAddress();
-        String phoneNumber = userDetailService.getUserDetail(id).getPhoneNumber();
         Map<String,Object> resultMap = new HashMap<String,Object>();
-        resultMap.put("address",address);
-        resultMap.put("phoneNumber",phoneNumber);
-        return resultMap;
+        try{
+            String address = userDetailService.getUserDetail(id).getAddress();
+            String phoneNumber = userDetailService.getUserDetail(id).getPhoneNumber();
+            resultMap.put("address",address);
+            resultMap.put("phoneNumber",phoneNumber);
+        }catch (Exception e){
+            resultMap.put("failed", null);
+        }finally {
+            return resultMap;
+        }
     }
 
     @RequestMapping(value = "/doLogout")

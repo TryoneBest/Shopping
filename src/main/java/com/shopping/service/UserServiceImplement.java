@@ -52,14 +52,16 @@ public class UserServiceImplement implements UserService {
     public Response deleteUser(int id) {
         //判断此用户是否存在购买记录、评价记录、购物车记录，如果存在，则应该先删除对应的记录，否则后续删除会出错
         try {
-            evaluationDao.deleteEvaluationByUser(id);
-            shoppingCarDao.deleteShoppingCarByUser(id);
-            shoppingRecordDao.deleteShoppingRecordByUser(id);
-            userDetailDao.deleteUserDetail(id);
-            userDao.deleteUser(id);
-            if(!evaluationDao.deleteEvaluationByUser(id)||!shoppingCarDao.deleteShoppingCarByUser(id)||!shoppingRecordDao.deleteShoppingRecordByUser(id)||!userDetailDao.deleteUserDetail(id)||!userDao.deleteUser(id))
-                return new Response(0,"删除失败",null);
-            return new Response(1, "删除成功", null);
+            boolean re1 = evaluationDao.deleteEvaluationByUser(id);
+            boolean re2 = shoppingCarDao.deleteShoppingCarByUser(id);
+            boolean re3 = shoppingRecordDao.deleteShoppingRecordByUser(id);
+            boolean re4 = userDetailDao.deleteUserDetail(id);
+            boolean re5 = userDao.deleteUser(id);
+            if(re1 || re2 || re3 || re4 || re5){
+                return new Response(1, "删除成功", null);
+            }else{
+                return new Response(0, "删除失败", null);
+            }
         }catch (Exception e) {
             return new Response(0, "删除失败", null);
         }
