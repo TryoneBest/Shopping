@@ -35,31 +35,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="shopping" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shopping" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shopping" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shopping: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shopping" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shopping: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user_detail: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shopping" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shopping: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user_main: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -156,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingRecordDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/EvaluationDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDetailDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDetailDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/entity/Evaluation.java" />
@@ -222,19 +196,20 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="35" />
-    <option name="y" value="125" />
-    <option name="width" value="1920" />
-    <option name="height" value="1020" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -328,7 +303,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -336,11 +311,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560789033478" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562040147019" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/checkstyle.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -354,17 +329,21 @@
       <recent name="com.shopping.dao" />
       <recent name="com.shopping.controller" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\webapp\WEB-INF" />
-      <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\java" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shopping.service" />
+      <recent name="com.shopping.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\webapp\WEB-INF\classs" />
       <recent name="E:\PCQQ\记录\1091246253\FileRecv\项目源码\项目源码\src\main\webapp" />
       <recent name="E:\学习资料\Software_Testing_by_Fan_Hongfei\project\Shopping-master\Shopping-master\src\main\webapp\static\img" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\webapp\WEB-INF" />
+      <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -430,7 +409,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.shopping.controller" />
       <option name="MAIN_CLASS_NAME" value="com.shopping.controller.UserInterfaceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -525,12 +503,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat-1" />
       <item itemvalue="JUnit.UserDetailServiceImplementTest.BACK_001_UUDS_001_03" />
       <item itemvalue="JUnit.UserDetailServiceImplementTest.BACK_001_GAUDS_001_01" />
       <item itemvalue="JUnit.All in shopping" />
       <item itemvalue="JUnit.UserInterfaceTest" />
       <item itemvalue="JUnit.UserInterfaceTest.INTER_001_DUUC_001_06" />
+      <item itemvalue="Tomcat Server.Tomcat-1" />
     </list>
     <recent_temporary>
       <list>
@@ -609,7 +587,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19034852" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.041493777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -643,7 +621,7 @@
       <window_info anchor="right" id="JSF" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="CDI" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.16957104" />
+      <window_info anchor="right" id="Database" order="8" weight="0.34993085" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
@@ -855,20 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingRecordPriKey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -970,17 +934,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/utils/Response.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://bec86ccd-ba77-47e1-931e-e3fd0da0ac76/schema/shopping/table/user_main" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserInterfaceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1387">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#7522#8541#0" />
+            <element signature="e#8547#9401#0" />
+            <element signature="e#9407#10265#0" />
+            <element signature="e#10271#11135#0" />
+            <element signature="e#12421#12968#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1059,7 +1031,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="123" column="50" lean-forward="true" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="50" />

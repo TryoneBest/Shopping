@@ -23,272 +23,232 @@ public class UserDaoImplementTest {
     private UserDaoImplement userDao;
 
     @Before
-    public  void init(){
+    public void init() {
 
     }
 
     @Test
     public void BACK_001_GUD_001_01() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        int  id=-3;
+        int id = -3;
         try {
             assertNull(userDao.getUser(id));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_GUD_001_02(){
+    public void BACK_001_GUD_001_02() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        int id=44;
+        int id = 44;
         try {
             assertNull(userDao.getUser(id));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_GUD_001_03(){
+    public void BACK_001_GUD_001_03() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        int id=1;
+        int id = 1;
         try {
             assertNull(userDao.getUser(id));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_GUD_002_01(){
+    public void BACK_001_GUD_002_01() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        String nameOrEmail = "Tom";
+        String nameOrEmail = "小明";
         try {
             assertNull(userDao.getUser(nameOrEmail));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_GUD_002_02(){
+    public void BACK_001_GUD_002_02() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        String nameOrEmail = "lalala";
+        String nameOrEmail = "李老";
         try {
             assertNull(userDao.getUser(nameOrEmail));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_GUD_002_03(){
+    public void BACK_001_GUD_002_03() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        String nameOrEmail=null;
+        String nameOrEmail = null;
         try {
             assertNull(userDao.getUser(nameOrEmail));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_AUD_001_01(){
-        UserDaoImplement userDaoImplement =   new UserDaoImplement();
-        User user = new User();
-        user.setId(2);user.setName("Anny");user.setEmail("166.163.com");user.setNickName("flow");user.setRole(4);
-        userDaoImplement.addUser(user);
-    }
-    @Test
-    public void BACK_001_AUD_001_02(){
+    public void BACK_001_AUD_001_01() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        User user = new User();
-        user.setId(3);user.setName("lili");
-        userDaoImplement.addUser(user);
+        User user = new User(7, "Anny", "166.163.com", "flow", 4);
+        try {
+            assertFalse(userDao.addUser(user));
+            System.out.println("failed");
+        } catch (AssertionError a) {
+            System.out.println("success");
+        }
     }
+
     @Test
-    public void BACK_001_DUD_001_01(){
+    public void BACK_001_AUD_001_02() {
+        User user = new User(9, "小明", "1234@163.com", "明小", 4);
+        try {
+            assertFalse(userDao.addUser(user));
+            System.out.println("failed");
+        } catch (AssertionError a) {
+            System.out.println("success");
+        }
+    }
+
+    @Test
+    public void BACK_001_AUD_001_03() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        int  id=-3;
+        User user = new User(8, null, null, "bido", 3);
+        try {
+            assertFalse(userDao.addUser(user));
+            System.out.println("failed");
+        } catch (AssertionError a) {
+            System.out.println("success");
+        }
+    }
+
+    @Test
+    public void BACK_001_DUD_001_01() {
+        UserDaoImplement userDaoImplement = new UserDaoImplement();
+        int id = -3;
         try {
             assertFalse(userDao.deleteUser(id));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_DUD_001_02(){
+    public void BACK_001_DUD_001_02() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        int id=33;
+        int id = 33;
         try {
             assertFalse(userDao.deleteUser(id));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_DUD_001_03(){
+    public void BACK_001_DUD_001_03() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        int id=23;
+        int id = 6;
         try {
-            assertFalse(userDao.deleteUser(id));
-            System.out.println("failed");
-        }catch (AssertionError a){
+            assertTrue(userDao.deleteUser(id));
             System.out.println("success");
+        } catch (Exception a) {
+            System.out.println("failed");
         }
     }
+
     @Test
-    public void BACK_001_UUD_001_01(){
+    public void BACK_001_DUD_001_04() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        User user = new User();
-        user.setId(5);user.setName("xurenhe");user.setEmail("163.com");
+        int id = 5;
         try {
-            assertFalse(userDao.updateUser(user));
-            System.out.println("failed");
-        }catch (AssertionError a){
+            assertTrue(userDao.deleteUser(id));
             System.out.println("success");
+        } catch (Exception a) {
+            System.out.println("failed");
         }
     }
+
     @Test
-    public void BACK_001_UUD_001_02(){
+    public void BACK_001_UUD_001_01() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        User user = new User();
-        user.setId(-3);user.setName("aiyu");user.setEmail("1.com");user.setNickName("bi");user.setRole(-4);
+        User user = new User(5, null, "163.com", "nick", 4);
         try {
-            assertFalse(userDao.updateUser(user));
-            System.out.println("failed");
-        }catch (AssertionError a){
+            assertTrue(userDao.updateUser(user));
             System.out.println("success");
+        } catch (Exception a) {
+            System.out.println("failed");
         }
     }
+
     @Test
-    public void BACK_001_UUD_001_03(){
+    public void BACK_001_UUD_001_02() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        User user = new User();
-        user.setId(1);user.setName("Tom");user.setEmail("3.com");user.setNickName("link");user.setRole(4);
-        try {
-            assertFalse(userDao.updateUser(user));
-            System.out.println("failed");
-        }catch (AssertionError a){
-            System.out.println("success");
-        }
-    }
-    @Test
-    public void BACK_001_UUD_001_04(){
-        UserDaoImplement userDaoImplement = new UserDaoImplement();
-        User user = new User();
-        user.setId(1);user.setName("xu");user.setEmail("4.com");user.setNickName("didi");user.setRole(4);
+        User user = new User(-3, "aiyu", "1.com", "bi", -4);
         try {
             assertFalse(userDao.updateUser(user));
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_GAUD_001_01(){
+    public void BACK_001_UUD_001_03() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        try{
+        User user = new User(1, "小明", "3.com", "link", 4);
+        try {
+            assertFalse(userDao.updateUser(user));
+            System.out.println("failed");
+        } catch (AssertionError a) {
+            System.out.println("success");
+        }
+    }
+
+    @Test
+    public void BACK_001_UUD_001_04() {
+        UserDaoImplement userDaoImplement = new UserDaoImplement();
+        User user = new User(1, "小刚", "4321@qq.com", "徐小", 4);
+        try {
+            assertFalse(userDao.updateUser(user));
+            System.out.println("failed");
+        } catch (AssertionError a) {
+            System.out.println("success");
+        }
+    }
+
+    @Test
+    public void BACK_001_GAUD_001_01() {
+        UserDaoImplement userDaoImplement = new UserDaoImplement();
+        try {
             assertNull(userDao.getAllUser());
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
+
     @Test
-    public void BACK_001_GAUD_001_02(){
-        UserDaoImplement userDaoImplement =new UserDaoImplement();
-        try{
+    public void BACK_001_GAUD_001_02() {
+        UserDaoImplement userDaoImplement = new UserDaoImplement();
+        try {
             assertNull(userDao.getAllUser());
             System.out.println("failed");
-        }catch (AssertionError a){
+        } catch (AssertionError a) {
             System.out.println("success");
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-    @Test
-    public void getUser1() {
-
-        try {
-            User  user = userDao.getUser(nameOrEmail);
-            if(user!=null){
-                System.out .println(1);
-            }else
-                System.out.println(-1);
-        }catch (Exception E){
-            System.out.println(-1);
-        }
-    }
-
-    @Test
-    public void addUser() {
-        try {
-            userDao.addUser(u);
-            System.out.println(1);
-        }catch (Exception E){
-            System.out.println(-1);
-        }
-
-    }
-
-    @Test
-    public void deleteUser() {
-        try {
-            if(userDao.deleteUser(u.getId()))
-                System.out.println(1);
-            else
-                System.out.println(-1);
-        }catch (Exception e){
-            System.out.println(-1);
-        }
-
-
-    }
-
-    @Test
-    public void updateUser() {
-        try {
-            if(userDao.updateUser(u))
-                System.out.println(1);
-            else
-                System.out.println(-1);
-        }catch (Exception e){
-            System.out.println(-1);
-        }
-
-
-    }
-
-    @Test
-    public void getAllUser() {
-        try {
-            if(userDao.getAllUser()!=null)
-                System.out.println(1);
-            else
-                System.out.println(-1);
-        }catch (Exception e){
-            System.out.println(-1);
-        }
-
-
-    }
-    */
 }

@@ -25,6 +25,9 @@ import java.util.*;
  */
 @Controller
 public class UserController {
+    public boolean tag = false;
+    public User user_temp;
+    public UserDetail userDetail_temp;
 
     @Resource
     UserService userService;
@@ -75,7 +78,9 @@ public class UserController {
             result = "unexist";
         } else {
             UserDetail userDetail = userDetailService.getUserDetail(user.getId());
-            if (userDetail.getPassword().equals(password)) {
+            if (password == null) {
+                result = "null password";
+            }  else if (userDetail.getPassword().equals(password)) {
                 result = "success";
                 httpSession.setAttribute("currentUser", user);
             } else {
