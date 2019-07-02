@@ -27,12 +27,18 @@ public class ShoppingCarPriKey implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ShoppingCarPriKey)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof ShoppingCarPriKey)) {
+            return false;
+        }
 
         ShoppingCarPriKey that = (ShoppingCarPriKey) o;
 
-        if (userId != that.userId) return false;
+        if (userId != that.userId) {
+            return false;
+        }
         return productId == that.productId;
 
     }

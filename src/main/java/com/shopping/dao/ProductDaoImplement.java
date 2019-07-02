@@ -28,7 +28,7 @@ public class ProductDaoImplement implements ProductDao {
     public Product getProduct(String name) {
         String hql = "from Product where name=?";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter(0,name);
+        query.setParameter(0, name);
         return (Product) query.uniqueResult();
     }
 
@@ -49,27 +49,27 @@ public class ProductDaoImplement implements ProductDao {
     public boolean updateProduct(Product product) {
         String hql = "update Product set name=?,description=?,keyWord=?,price=?,counts=?,type=? where id=?";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter(0,product.getName());
-        query.setParameter(1,product.getDescription());
-        query.setParameter(2,product.getKeyWord());
-        query.setParameter(3,product.getPrice());
-        query.setParameter(4,product.getCounts());
-        query.setParameter(5,product.getType());
-        query.setParameter(6,product.getId());
+        query.setParameter(0, product.getName());
+        query.setParameter(1, product.getDescription());
+        query.setParameter(2, product.getKeyWord());
+        query.setParameter(3, product.getPrice());
+        query.setParameter(4, product.getCounts());
+        query.setParameter(5, product.getType());
+        query.setParameter(6, product.getId());
         return query.executeUpdate() > 0;
     }
 
     @Override
     public List<Product> getProductsByKeyWord(String searchKeyWord) {
         String queryKeyWord = "%";
-        for(int i=0;i<searchKeyWord.length();i++){
-            queryKeyWord += String.valueOf(searchKeyWord.charAt(i)) +"%";
+        for (int i = 0; i < searchKeyWord.length(); i++) {
+            queryKeyWord += String.valueOf(searchKeyWord.charAt(i)) + "%";
         }
-        System.out.println("我搜索了"+queryKeyWord);
+        System.out.println("我搜索了" + queryKeyWord);
         String hql = "from Product where name like ? or key_word like ?";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter(0,queryKeyWord);
-        query.setParameter(1,queryKeyWord);
+        query.setParameter(0, queryKeyWord);
+        query.setParameter(1, queryKeyWord);
         return query.list();
     }
 
@@ -77,10 +77,9 @@ public class ProductDaoImplement implements ProductDao {
     public List<Product> getProductsByType(int type) {
         String hql = "from Product where type=?";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter(0,type);
+        query.setParameter(0, type);
         return query.list();
     }
-
 
     @Override
     public List<Product> getAllProduct() {

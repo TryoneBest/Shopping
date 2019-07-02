@@ -17,7 +17,7 @@ public class EvaluationServiceImplement implements EvaluationService {
 
     @Override
     public Evaluation getEvaluation(int userId, int productId, String time) {
-        return evaluationDao.getEvaluation(userId,productId,time);
+        return evaluationDao.getEvaluation(userId, productId, time);
     }
 
     @Override
@@ -27,7 +27,7 @@ public class EvaluationServiceImplement implements EvaluationService {
 
     @Override
     public boolean deleteEvaluation(int userId, int productId, String time) {
-        return evaluationDao.deleteEvaluation(userId,productId,time);
+        return evaluationDao.deleteEvaluation(userId, productId, time);
     }
 
     @Override

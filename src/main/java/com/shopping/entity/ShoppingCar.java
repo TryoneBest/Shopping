@@ -6,8 +6,8 @@ import javax.persistence.*;
  * Created by 14437 on 2017/3/3.
  */
 @Entity
-@Table(name="shopping_car")
-@IdClass(value=ShoppingCarPriKey.class)
+@Table(name = "shopping_car")
+@IdClass(value = ShoppingCarPriKey.class)
 public class ShoppingCar {
     private int userId;
     private int productId;
@@ -15,7 +15,7 @@ public class ShoppingCar {
     private int counts;
 
     @Id
-    @Column(name="user_id")
+    @Column(name = "user_id")
     public int getUserId() {
         return userId;
     }
@@ -25,7 +25,7 @@ public class ShoppingCar {
     }
 
     @Id
-    @Column(name="product_id")
+    @Column(name = "product_id")
     public int getProductId() {
         return productId;
     }
@@ -34,7 +34,7 @@ public class ShoppingCar {
         this.productId = productId;
     }
 
-    @Column(name="product_price")
+    @Column(name = "product_price")
     public int getProductPrice() {
         return productPrice;
     }
@@ -43,7 +43,7 @@ public class ShoppingCar {
         this.productPrice = productPrice;
     }
 
-    @Column(name="counts")
+    @Column(name = "counts")
     public int getCounts() {
         return counts;
     }

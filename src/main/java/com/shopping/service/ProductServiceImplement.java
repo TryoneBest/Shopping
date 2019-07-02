@@ -51,8 +51,8 @@ public class ProductServiceImplement implements ProductService {
             shoppingRecordDao.deleteShoppingRecordByProductId(id);
             productDao.deleteProduct(id);
             return new Response(1, "删除商品成功", null);
-        }catch (Exception e){
-            return new Response(0,"删除商品失败",null);
+        } catch (NullPointerException e) {
+            return new Response(0, "删除商品失败", null);
         }
     }
 

@@ -64,6 +64,7 @@ public class UserDetailDaoImplementTest {
             assertNull(result);
             System.out.println("failed");
         }catch (AssertionError ae){
+            System.out.println(result);
             System.out.println("success");
         }
     }

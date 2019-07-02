@@ -16,7 +16,7 @@ public class UserDetailServiceImplement implements UserDetailService {
     @Autowired
     private UserDetailDao userDetailDao;
 
-    public void setUserDetailDao(UserDetailDao userDetailDao){
+    public void setUserDetailDao(UserDetailDao userDetailDao) {
         this.userDetailDao = userDetailDao;
     }
 

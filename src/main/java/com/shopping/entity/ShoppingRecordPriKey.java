@@ -36,13 +36,21 @@ public class ShoppingRecordPriKey implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ShoppingRecordPriKey)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof ShoppingRecordPriKey)) {
+            return false;
+        }
 
         ShoppingRecordPriKey that = (ShoppingRecordPriKey) o;
 
-        if (getUserId() != that.getUserId()) return false;
-        if (getProductId() != that.getProductId()) return false;
+        if (getUserId() != that.getUserId()) {
+            return false;
+        }
+        if (getProductId() != that.getProductId()) {
+            return false;
+        }
         return getTime().equals(that.getTime());
 
     }

@@ -6,8 +6,8 @@ import javax.persistence.*;
  * Created by 14437 on 2017/3/3.
  */
 @Entity
-@Table(name="shopping_record")
-@IdClass(value=ShoppingRecordPriKey.class)
+@Table(name = "shopping_record")
+@IdClass(value = ShoppingRecordPriKey.class)
 public class ShoppingRecord {
     private int userId;
     private int productId;
@@ -17,7 +17,7 @@ public class ShoppingRecord {
     private int counts;
 
     @Id
-    @Column(name="user_id")
+    @Column(name = "user_id")
     public int getUserId() {
         return userId;
     }
@@ -27,7 +27,7 @@ public class ShoppingRecord {
     }
 
     @Id
-    @Column(name="product_id")
+    @Column(name = "product_id")
     public int getProductId() {
         return productId;
     }
@@ -37,7 +37,7 @@ public class ShoppingRecord {
     }
 
     @Id
-    @Column(name="time")
+    @Column(name = "time")
     public String getTime() {
         return time;
     }
@@ -46,7 +46,7 @@ public class ShoppingRecord {
         this.time = time;
     }
 
-    @Column(name="order_status")
+    @Column(name = "order_status")
     public int getOrderStatus() {
         return orderStatus;
     }
@@ -55,7 +55,7 @@ public class ShoppingRecord {
         this.orderStatus = orderStatus;
     }
 
-    @Column(name="product_price")
+    @Column(name = "product_price")
     public int getProductPrice() {
         return productPrice;
     }
@@ -64,7 +64,7 @@ public class ShoppingRecord {
         this.productPrice = productPrice;
     }
 
-    @Column(name="counts")
+    @Column(name = "counts")
     public int getCounts() {
         return counts;
     }
@@ -72,6 +72,5 @@ public class ShoppingRecord {
     public void setCounts(int counts) {
         this.counts = counts;
     }
-
 
 }

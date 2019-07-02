@@ -10,7 +10,6 @@ import com.shopping.service.UserService;
 import com.shopping.utils.Response;
 import org.springframework.stereotype.Controller;
 
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -19,6 +18,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.*;
+
 
 /**
  * Created by 14437 on 2017/3/1.
@@ -32,8 +32,13 @@ public class UserController {
     @Resource
     UserDetailService userDetailService;
 
-    public  void reset(UserService userService){this.userService=userService;}
-    public  void reset(UserDetailService userDetailService){this.userDetailService = userDetailService;}
+    public  void reset(UserService userService) {
+        this.userService = userService;
+    }
+
+    public  void reset(UserDetailService userDetailService) {
+        this.userDetailService = userDetailService;
+    }
 
     @RequestMapping(value = "/register")
     public String register() {
@@ -66,15 +71,16 @@ public class UserController {
         System.out.println("我接收到了登录请求" + userNameOrEmail + " " + password);
         String result = "fail";
         User user = userService.getUser(userNameOrEmail);
-        if (user == null)
+        if (user == null) {
             result = "unexist";
-        else {
+        } else {
             UserDetail userDetail = userDetailService.getUserDetail(user.getId());
             if (userDetail.getPassword().equals(password)) {
                 result = "success";
                 httpSession.setAttribute("currentUser", user);
-            } else
+            } else {
                 result = "wrong";
+            }
         }
         Map<String, Object> resultMap = new HashMap<String, Object>();
         resultMap.put("result", result);
@@ -83,9 +89,11 @@ public class UserController {
 
     @RequestMapping(value = "/doRegister", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> doRegister(String userName, String email, String nickName, String password, String phoneNumber, int sex, String birthday, String postNumber, String address) {
+    public Map<String, Object> doRegister(String userName, String email, String nickName,
+                                          String password, String phoneNumber, int sex,
+                                          String birthday, String postNumber, String address) {
         Map<String, Object> resultMap = new HashMap<String, Object>();
-        boolean result_tag = true;
+        boolean resultTag = true;
         String result = "fail";
         User user = userService.getUser(userName);
         if (user != null) {
@@ -94,12 +102,11 @@ public class UserController {
             //return resultMap;
         } else {
             user = userService.getUser(email);
-            if (user != null){
+            if (user != null) {
                 result = "emailExist";
                 //resultMap.put("result", result);
                 //return resultMap;
-            }
-            else {
+            } else {
                 User user1 = new User();
                 user1.setName(userName);
                 System.out.println(userName);
@@ -111,11 +118,11 @@ public class UserController {
                 //user1.setId(6);
                 //User user2 = new User();
                 //System.out.println("userid:" + user2.getId());
-                try{
-                    result_tag = userService.addUser(user1);
-                    if(!result_tag)
+                try {
+                    resultTag = userService.addUser(user1);
+                    if (!resultTag) {
                         result = "add user failed";
-                    else {
+                    } else {
                         user1 = userService.getUser(userName);
                         UserDetail userDetail = new UserDetail();
                         userDetail.setId(user1.getId());
@@ -128,17 +135,18 @@ public class UserController {
                         Date date = new Date();
                         SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                         userDetail.setRegisterTime(sf.format(date));
-                        try{
-                            result_tag = userDetailService.addUserDetail(userDetail);
-                            if(!result_tag)
-                                result="user detail failed";
-                            else
+                        try {
+                            resultTag = userDetailService.addUserDetail(userDetail);
+                            if (!resultTag) {
+                                result = "user detail failed";
+                            } else {
                                 result = "success";
-                        }catch (Exception e){
-                            result="user detail failed";
+                            }
+                        } catch (NullPointerException e) {
+                            result = "user detail failed";
                         }
                     }
-                }catch (Exception e){
+                } catch (Exception e) {
                     result = "add user failed";
                 }
                 //result = "success";
@@ -150,16 +158,17 @@ public class UserController {
 
     @RequestMapping(value = "/doUpdate", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> doUpdate(String userName, String email, String nickName, String password, String phoneNumber, int sex, String birthday, String postNumber, String address) {
-        //try{
+    public Map<String, Object> doUpdate(String userName, String email, String nickName,
+                                        String password, String phoneNumber, int sex,
+                                        String birthday, String postNumber, String address) {
+        try {
             String result = "fail";
             User user = userService.getUser(userName);
             user.setEmail(email);
             user.setNickName(nickName);
-            if(!userService.updateUser(user)){
-                result="update user failed";
-            }
-            else{
+            if (!userService.updateUser(user)) {
+                result = "update user failed";
+            } else {
                 UserDetail userDetail = userDetailService.getUserDetail(user.getId());
                 userDetail.setAddress(address);
                 userDetail.setBirthday(birthday);
@@ -167,34 +176,35 @@ public class UserController {
                 userDetail.setPhoneNumber(phoneNumber);
                 userDetail.setSex(sex);
                 userDetail.setPostNumber(postNumber);
-                if(!userDetailService.updateUserDetail(userDetail))
-                    result="update user detail failed";
-                else
-                    result="success";
+                if (!userDetailService.updateUserDetail(userDetail)) {
+                    result = "update user detail failed";
+                } else {
+                    result = "success";
+                }
             }
             Map<String, Object> resultMap = new HashMap<String, Object>();
             resultMap.put("result", result);
             return resultMap;
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             String result = "exception  failed";
-            Map<String,Object> resultMap = new HashMap<>();
-            resultMap.put("result",result);
+            Map<String, Object> resultMap = new HashMap<>();
+            resultMap.put("result", result);
             resultMap.put("exception", e.getClass().getName());
             return resultMap;
-        }*/
+        }
     }
 
     @RequestMapping(value = "/getAllUser", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> getAllUser() {
-//        System.out.println("我接收到了获取用户请求");
+        //System.out.println("我接收到了获取用户请求");
         List<User> userList = new ArrayList<>();
         userList = userService.getAllUser();
         String allUsers = JSONArray.toJSONString(userList, SerializerFeature.WriteMapNullValue);
-//        System.out.println("我返回的结果是"+allUsers);
-        Map<String,Object> resultMap = new HashMap<String,Object>();
-        resultMap.put("allUsers",allUsers);
+        //System.out.println("我返回的结果是"+allUsers);
+        Map<String, Object> resultMap = new HashMap<String, Object>();
+        resultMap.put("allUsers", allUsers);
         return resultMap;
     }
 
@@ -209,22 +219,22 @@ public class UserController {
     @RequestMapping(value = "/getUserAddressAndPhoneNumber", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> getUserAddressAndPhoneNumber(int id) {
-        Map<String,Object> resultMap = new HashMap<String,Object>();
-        try{
+        Map<String, Object> resultMap = new HashMap<String, Object>();
+        try {
             String address = userDetailService.getUserDetail(id).getAddress();
             String phoneNumber = userDetailService.getUserDetail(id).getPhoneNumber();
-            resultMap.put("address",address);
-            resultMap.put("phoneNumber",phoneNumber);
-        }catch (Exception e){
+            resultMap.put("address", address);
+            resultMap.put("phoneNumber", phoneNumber);
+        } catch (NullPointerException e) {
             resultMap.put("failed", null);
-        }finally {
+        } finally {
             return resultMap;
         }
     }
 
     @RequestMapping(value = "/doLogout")
-    public String doLogout(HttpSession httpSession){
-        httpSession.setAttribute("currentUser","");
+    public String doLogout(HttpSession httpSession) {
+        httpSession.setAttribute("currentUser", "");
         return "redirect:login";
     }
 
@@ -233,8 +243,8 @@ public class UserController {
     public Map<String, Object> getUserById(int id) {
         User user = userService.getUser(id);
         String result = JSON.toJSONString(user);
-        Map<String,Object> resultMap = new HashMap<String,Object>();
-        resultMap.put("result",result);
+        Map<String, Object> resultMap = new HashMap<String, Object>();
+        resultMap.put("result", result);
         return resultMap;
     }
 
@@ -243,8 +253,8 @@ public class UserController {
         public Map<String, Object> getUserDetailById(int id) {
         UserDetail userDetail = userDetailService.getUserDetail(id);
         String result = JSON.toJSONString(userDetail);
-        Map<String,Object> resultMap = new HashMap<String,Object>();
-        resultMap.put("result",result);
+        Map<String, Object> resultMap = new HashMap<String, Object>();
+        resultMap.put("result", result);
         return resultMap;
     }
 

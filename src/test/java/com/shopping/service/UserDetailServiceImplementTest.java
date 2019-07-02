@@ -12,6 +12,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
@@ -42,10 +45,12 @@ public class UserDetailServiceImplementTest {
 
     @Before
     public void setUp() throws Exception {
-        setUserDetailEntity(userDetailID1, 1, "上海市同济大学嘉定校区六号楼", "1997.10.8",
-                "test1234", "15355953825", "325200", "2019.6.30 15:10", 0);
+        setUserDetailEntity(userDetailID1, 4, "浙江省温州市瓯海区", "1999.5.3",
+                "test1234", "18916103004", "325220", "2019.6.30 16:40", 0);
         mockUserDetail = mock(UserDetailDao.class);
-        when(mockUserDetail.getUserDetail(1)).thenReturn(userDetailID1);
+        List<UserDetail> list = Arrays.asList(userDetailID1);
+        when(mockUserDetail.getAllUserDetail()).thenReturn(list);
+        when(mockUserDetail.getUserDetail(4)).thenReturn(userDetailID1);
         when(mockUserDetail.getUserDetail(-1)).thenReturn(null);
         when(mockUserDetail.getUserDetail(5)).thenReturn(null);
         when(mockUserDetail.deleteUserDetail(-10)).thenReturn(false);
@@ -103,8 +108,8 @@ public class UserDetailServiceImplementTest {
     @Test
     public void BACK_001_AUDS_001_01() {
         //add_user_detail_case1
-        setUserDetailEntity(userDetailAdd, 5, "上海市同济大学嘉定校区六号楼", "1997.10.8",
-                "test1234", "15355953825", "325200", "2019.6.30 16:40", 0);
+        setUserDetailEntity(userDetailAdd, 6, "浙江省温州市瓯海区", "1999.5.3",
+                "test1234", "18916103004", "325220", "2019.6.30 16:40", 0);
         when(mockUserDetail.addUserDetail(userDetailAdd)).thenReturn(true);
         boolean result = userDetailService.addUserDetail(userDetailAdd);
         verify(mockUserDetail, times(1)).addUserDetail(userDetailAdd);
@@ -238,8 +243,8 @@ public class UserDetailServiceImplementTest {
     @Test
     public void BACK_001_UUDS_001_03() {
         //update_user_detail_case3
-        setUserDetailEntity(userDetailUpdate, 1, "上海市同济大学嘉定校区20号楼", "1966.10.8", "test1234"
-        ,"15355912345", "325621", "2019.6.30 22：52", 0);
+        setUserDetailEntity(userDetailUpdate, 4, "浙江省温州市瓯海区", "1999.5.3",
+                "test1234", "18916103004", "325220", "2019.6.30 16:40", 0);
         when(mockUserDetail.updateUserDetail(userDetailUpdate)).thenReturn(true);
         boolean result = userDetailService.updateUserDetail(userDetailUpdate);
         verify(mockUserDetail, times(1)).updateUserDetail(userDetailUpdate);
@@ -248,6 +253,20 @@ public class UserDetailServiceImplementTest {
             System.out.println("success");
         }catch (AssertionError ae){
             System.out.println("failed");
+        }
+    }
+
+    @Test
+    public void BACK_001_GAUDS_001_01() {
+        //get_all_user_case1
+        List result = userDetailService.getAllUserDetail();
+        verify(mockUserDetail, times(1)).getAllUserDetail();
+        try{
+            assertNull(result);
+            System.out.println("failed");
+        }catch (AssertionError ae){
+            System.out.println(result);
+            System.out.println("success");
         }
     }
 }

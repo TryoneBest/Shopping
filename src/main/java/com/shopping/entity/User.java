@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name="user_main")
+@Table(name = "user_main")
 public class User {
 
     private int id;
@@ -22,7 +22,7 @@ public class User {
     @GenericGenerator(name = "generator", strategy = "increment") //设置主键自增
     @GeneratedValue(generator = "generator")
 
-    @Column(name="id")
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -31,7 +31,7 @@ public class User {
         this.id = id;
     }
 
-    @Column(name="name")
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -40,7 +40,7 @@ public class User {
         this.name = name;
     }
 
-    @Column(name="email")
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
@@ -49,17 +49,16 @@ public class User {
         this.email = email;
     }
 
-    @Column(name="nick_name")
+    @Column(name = "nick_name")
     public String getNickName() {
         return nickName;
     }
-
 
     public void setNickName(String nickName) {
         this.nickName = nickName;
     }
 
-    @Column(name="role")
+    @Column(name = "role")
     public int getRole() {
         return role;
     }
@@ -68,26 +67,34 @@ public class User {
         this.role = role;
     }
 
-
-    public User(int id,String name,String email,String nickName,int role){
-        this.id=id;this.name=name;this.nickName=nickName;this.email=email;this.role=role;
+    public User(int id, String name, String email, String nickName, int role) {
+        this.id = id;
+        this.name = name;
+        this.nickName = nickName;
+        this.email = email;
+        this.role = role;
     }
 
     public User(){
 
     }
 
-    public boolean equals(Object obj){
-        if(this ==obj)
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
-        if(obj==null)
+        }
+        if (obj == null) {
             return  false;
-        if(getClass()!=obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
+        }
         User other = (User)obj;
-        if(name.equals(other.name)&&nickName.equals(other.nickName)&&email.equals(other.email)&&role==other.role)
+        if (name.equals(other.name) && nickName.equals(other.nickName)
+                && email.equals(other.email) && role == other.role) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 }

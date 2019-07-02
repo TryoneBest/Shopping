@@ -14,9 +14,10 @@ import java.util.List;
 public class ShoppingCarServiceImplement implements ShoppingCarService {
     @Autowired
     private ShoppingCarDao shoppingCarDao;
+
     @Override
     public ShoppingCar getShoppingCar(int userId, int productId) {
-        return shoppingCarDao.getShoppingCar(userId,productId);
+        return shoppingCarDao.getShoppingCar(userId, productId);
     }
 
     @Override
@@ -26,7 +27,7 @@ public class ShoppingCarServiceImplement implements ShoppingCarService {
 
     @Override
     public boolean deleteShoppingCar(int userId, int productId) {
-        return shoppingCarDao.deleteShoppingCar(userId,productId);
+        return shoppingCarDao.deleteShoppingCar(userId, productId);
     }
 
     @Override

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
  * Created by 14437 on 2017/3/1.
  */
 @Repository
-public class UserDetailDaoImplement implements UserDetailDao{
+public class UserDetailDaoImplement implements UserDetailDao {
     @Resource
     private SessionFactory sessionFactory;
 
@@ -25,19 +25,20 @@ public class UserDetailDaoImplement implements UserDetailDao{
 
     @Override
     public boolean addUserDetail(UserDetail userDetail) {
-        if(userDetail.getBirthday() == null || userDetail.getPostNumber() == null || userDetail.getPhoneNumber() == null
-            || userDetail.getPassword() == null || userDetail.getAddress() == null || userDetail.getRegisterTime() == null){
+        if (userDetail.getBirthday() == null || userDetail.getPostNumber() == null
+                || userDetail.getPhoneNumber() == null || userDetail.getPassword() == null
+                || userDetail.getAddress() == null || userDetail.getRegisterTime() == null) {
             return false;
-        }else{
+        } else {
             String hql = "from UserDetail where id=?";
             String hql1 = "from User where id=?";
             Query query = sessionFactory.getCurrentSession().createQuery(hql);
             Query query1 = sessionFactory.getCurrentSession().createQuery(hql1);
             query.setParameter(0, userDetail.getId());
             query1.setParameter(0, userDetail.getId());
-            if(query.uniqueResult() != null || query1.uniqueResult() == null){
+            if (query.uniqueResult() != null || query1.uniqueResult() == null) {
                 return false;
-            }else{
+            } else {
                 sessionFactory.getCurrentSession().save(userDetail);
                 return true;
             }
@@ -54,15 +55,16 @@ public class UserDetailDaoImplement implements UserDetailDao{
 
     @Override
     public boolean updateUserDetail(UserDetail userDetail) {
-        String hql = "update UserDetail set password=?,phoneNumber=?,sex=?,birthday=?,postNumber=?,address=? where id=?";
+        String hql = "update UserDetail set password=?,phoneNumber=?,sex=?,"
+                + "birthday=?,postNumber=?,address=? where id=?";
         Query query = sessionFactory.getCurrentSession().createQuery(hql);
-        query.setParameter(0,userDetail.getPassword());
-        query.setParameter(1,userDetail.getPhoneNumber());
-        query.setParameter(2,userDetail.getSex());
-        query.setParameter(3,userDetail.getBirthday());
-        query.setParameter(4,userDetail.getPostNumber());
-        query.setParameter(5,userDetail.getAddress());
-        query.setParameter(6,userDetail.getId());
+        query.setParameter(0, userDetail.getPassword());
+        query.setParameter(1, userDetail.getPhoneNumber());
+        query.setParameter(2, userDetail.getSex());
+        query.setParameter(3, userDetail.getBirthday());
+        query.setParameter(4, userDetail.getPostNumber());
+        query.setParameter(5, userDetail.getAddress());
+        query.setParameter(6, userDetail.getId());
         return query.executeUpdate() > 0;
     }
 

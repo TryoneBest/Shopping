@@ -29,10 +29,10 @@ public class EvaluationController {
 
     @RequestMapping(value = "/addShoppingEvaluation",method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> addShoppingEvaluation(int userId, int productId, String content){
-        System.out.println("我添加了"+userId+" "+productId);
+    public Map<String,Object> addShoppingEvaluation(int userId, int productId, String content) {
+        System.out.println("我添加了" + userId + " " + productId);
         String result = null;
-        if(shoppingRecordService.getUserProductRecord(userId,productId)){
+        if (shoppingRecordService.getUserProductRecord(userId,productId)) {
             Evaluation evaluation = new Evaluation();
             evaluation.setUserId(userId);
             evaluation.setProductId(productId);
@@ -42,9 +42,8 @@ public class EvaluationController {
             evaluation.setContent(content);
             evaluationService.addEvaluation(evaluation);
             result = "success";
-        }
-        else{
-            result="noneRecord";
+        } else {
+            result = "noneRecord";
         }
 
         Map<String,Object> resultMap = new HashMap<String,Object>();
@@ -54,7 +53,7 @@ public class EvaluationController {
 
     @RequestMapping(value = "/getShoppingEvaluations",method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> getShoppingEvaluations(int productId){
+    public Map<String,Object> getShoppingEvaluations(int productId) {
         List<Evaluation> evaluationList = evaluationService.getProductEvaluation(productId);
         String evaluations = JSONArray.toJSONString(evaluationList);
         Map<String,Object> resultMap = new HashMap<String,Object>();

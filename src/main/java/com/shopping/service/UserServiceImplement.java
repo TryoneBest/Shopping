@@ -26,11 +26,26 @@ public class UserServiceImplement implements UserService {
     @Autowired
     private EvaluationDao evaluationDao;
 
-    public void reset(UserDao userDao){this.userDao = userDao;}
-    public void reset(UserDetailDao userDetailDao){this.userDetailDao = userDetailDao;}
-    public void reset(ShoppingRecordDao shoppingRecordDao){this.shoppingRecordDao = shoppingRecordDao;}
-    public void reset(ShoppingCarDao shoppingCarDao){this.shoppingCarDao = shoppingCarDao;}
-    public void reset(EvaluationDao evaluationDao){this.evaluationDao=evaluationDao;}
+    public void reset(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    public void reset(UserDetailDao userDetailDao) {
+        this.userDetailDao = userDetailDao;
+    }
+
+    public void reset(ShoppingRecordDao shoppingRecordDao) {
+        this.shoppingRecordDao = shoppingRecordDao;
+    }
+
+    public void reset(ShoppingCarDao shoppingCarDao) {
+        this.shoppingCarDao = shoppingCarDao;
+    }
+
+    public void reset(EvaluationDao evaluationDao) {
+        this.evaluationDao = evaluationDao;
+    }
+
     @Override
     public User getUser(int id) {
         return userDao.getUser(id);
@@ -57,12 +72,12 @@ public class UserServiceImplement implements UserService {
             boolean re3 = shoppingRecordDao.deleteShoppingRecordByUser(id);
             boolean re4 = userDetailDao.deleteUserDetail(id);
             boolean re5 = userDao.deleteUser(id);
-            if(re1 || re2 || re3 || re4 || re5){
+            if (re1 || re2 || re3 || re4 || re5) {
                 return new Response(1, "删除成功", null);
-            }else{
+            } else {
                 return new Response(0, "删除失败", null);
             }
-        }catch (Exception e) {
+        } catch (NullPointerException e) {
             return new Response(0, "删除失败", null);
         }
     }

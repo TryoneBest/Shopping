@@ -9,13 +9,13 @@ import java.util.List;
  */
 public interface UserDetailDao {
 
-    public UserDetail getUserDetail(int id);
+    UserDetail getUserDetail(int id);
 
-    public boolean addUserDetail(UserDetail userDetail);
+    boolean addUserDetail(UserDetail userDetail);
 
-    public boolean deleteUserDetail(int id);
+    boolean deleteUserDetail(int id);
 
-    public boolean updateUserDetail(UserDetail userDetail);
+    boolean updateUserDetail(UserDetail userDetail);
 
-    public List<UserDetail> getAllUserDetail();
+    List<UserDetail> getAllUserDetail();
 }
