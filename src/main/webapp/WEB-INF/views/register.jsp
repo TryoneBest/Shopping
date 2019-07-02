@@ -119,26 +119,43 @@
                 user.sex = 1;
             if(user.userName == ''){
                 layer.msg('用户名不能为空',{icon:2});
+                //window.location.href="${cp}/register";
+                layer.close(loading);
                 return;
             }
             else if(user.userName.length >= 12){
                 layer.msg('用户名长度不能超过12个字符',{icon:2});
+                //window.location.href="${cp}/register";
+                layer.close(loading);
+                return;
+            }
+            if(user.email == ''){
+                layer.msg('邮箱不能为空', {icon:2});
+                layer.close(loading);
                 return;
             }
             if(user.nickName == ''){
                 layer.msg('昵称不能为空',{icon:2});
+                //window.location.href="${cp}/register";
+                layer.close(loading);
                 return;
             }
             else if(user.nickName.length >= 15){
                 layer.msg('用户名长度不能超过15个字符',{icon:2});
+                //window.location.href="${cp}/register";
+                layer.close(loading);
                 return;
             }
             else if(user.password == ''){
                 layer.msg('密码不能为空',{icon:2});
+                //window.location.href="${cp}/register";
+                layer.close(loading);
                 return;
             }
             else if(user.password.length>= 20){
                 layer.msg('密码长度不能超过20个字符',{icon:2});
+                //window.location.href="${cp}/register";
+                layer.close(loading);
                 return;
             }
             var registerResult = null;
@@ -166,11 +183,15 @@
             }
             else if(registerResult == 'emailExist'){
                 layer.close(loading);
-                layer.msg('这个用户名已经注册啦！',{icon:2});
+                layer.msg('这个邮箱已经注册啦！',{icon:2});
             }
-            else if(registerResult == 'fail'){
+            else if(registerResult == "add detail failed"){
                 layer.close(loading);
-                layer.msg('服务器异常',{icon:2});
+                layer.msg('添加用户详细信息失败，请确认用户详细信息非空',{icon:2});
+            }
+            else if(registerResult == "add user failed"){
+                layer.close(loading);
+                layer.msg('添加用户失败，请确认用户信息非空',{icon:2})
             }
         }
     </script>

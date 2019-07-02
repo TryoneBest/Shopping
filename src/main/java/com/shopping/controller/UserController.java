@@ -160,7 +160,7 @@ public class UserController {
     @ResponseBody
     public Map<String, Object> doUpdate(String userName, String email, String nickName,
                                         String password, String phoneNumber, int sex,
-                                        String birthday, String postNumber, String address) {
+                                        String birthday, String postNumber, String address, HttpSession session) {
         try {
             String result = "fail";
             User user = userService.getUser(userName);
@@ -180,6 +180,7 @@ public class UserController {
                     result = "update user detail failed";
                 } else {
                     result = "success";
+                    session.setAttribute("currentUser", user);
                 }
             }
             Map<String, Object> resultMap = new HashMap<String, Object>();
