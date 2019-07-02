@@ -11,6 +11,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -194,19 +196,19 @@ public class UserDetailDaoImplementTest {
     public void BACK_001_UUDD_001_01() {
         //update_user_detail_case1
         UserDetail update = new UserDetail();
-        update.setId(5);
+        update.setId(1);
         update.setPassword("test1234");
         update.setSex(0);
         update.setBirthday("1966.10.8");
         update.setPostNumber("325621");
         update.setRegisterTime("2019.6.30 22：52");
-        boolean result = userDetail.updateUserDetail(update);
         try{
+            boolean result = userDetail.updateUserDetail(update);
             assertTrue(result);
             System.out.println("success");
         }catch (Exception e){
             e.printStackTrace();
-            System.out.println("failed");
+            System.out.println("exception failed");
         }catch (AssertionError ae){
             ae.printStackTrace();
             System.out.println("failed");
@@ -254,6 +256,17 @@ public class UserDetailDaoImplementTest {
         }catch (AssertionError ae){
             ae.printStackTrace();
             System.out.println("failed");
+        }
+    }
+
+    @Test
+    public void BACK_001_GAUDD_001_01() {
+        List<UserDetail> list = userDetail.getAllUserDetail();
+        try {
+            assertNull(list);
+            System.out.println("failed");
+        } catch (AssertionError ae) {
+            System.out.println("success");
         }
     }
 }

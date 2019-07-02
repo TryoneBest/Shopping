@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.shopping.service.LoginServiceTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="14" failures="0" name="com.shopping.service.UserDetailServiceImplementTest" time="0.014" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12.0.1+12"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12.0.1\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="E:\PCQQ\记录\1091246253\FileRecv\项目源码\项目源码"/>
+    <property name="maven.multiModuleProjectDirectory" value="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\PCQQ\记录\1091246253\FileRecv\项目源码\项目源码"/>
+    <property name="user.dir" value="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="12.0.1+12"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -63,5 +63,18 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.shopping.service.LoginServiceTest" name="getUser" time="0.002"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_GUDS_001_01" time="0.003"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_GUDS_001_02" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_GUDS_001_03" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_UUDS_001_01" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_UUDS_001_02" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_UUDS_001_03" time="0"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_DUDS_001_01" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_DUDS_001_02" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_DUDS_001_03" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_GAUDS_001_01" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_AUDS_001_01" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_AUDS_001_02" time="0.001"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_AUDS_001_03" time="0"/>
+  <testcase classname="com.shopping.service.UserDetailServiceImplementTest" name="BACK_001_AUDS_001_04" time="0.001"/>
 </testsuite>
