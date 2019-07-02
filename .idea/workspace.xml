@@ -7,81 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f34ef96b-305a-4d4a-ab59-64b1f13444a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/controller/EvaluationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/controller/EvaluationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/controller/ShoppingCarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/controller/ShoppingCarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/controller/ShoppingRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/controller/ShoppingRecordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/EvaluationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/EvaluationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ProductDaoImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ProductDaoImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingCarDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingCarDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingCarDaoImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingCarDaoImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingRecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingRecordDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingRecordDaoImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingRecordDaoImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDetailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDetailDaoImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDetailDaoImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/entity/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/entity/Evaluation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingCarPriKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingCarPriKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingRecordPriKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingRecordPriKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/entity/UserDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/entity/UserDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/EvaluationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/EvaluationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/EvaluationServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/EvaluationServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/ProductServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/ProductServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/ShoppingCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/ShoppingCarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/ShoppingCarServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/ShoppingCarServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/ShoppingRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/ShoppingRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/ShoppingRecordServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/ShoppingRecordServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/UserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/UserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/UserDetailServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/UserDetailServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shopping/service/UserServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shopping/service/UserServiceImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/controller/DeleteControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/controller/LoginControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/dao/LoginDaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/dao/RegisterDaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/dao/UserDetailDaoImplementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/shopping/dao/UserDetailDaoImplementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/service/DeleteServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/service/LoginServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/service/RegisterServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/service/UserDetailServiceImplementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/shopping/service/UserDetailServiceImplementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/controller/EvaluationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/controller/EvaluationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/controller/ShoppingCarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/controller/ShoppingCarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/controller/ShoppingRecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/controller/ShoppingRecordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/dao/ProductDaoImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/dao/ProductDaoImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/dao/ShoppingRecordDaoImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/dao/ShoppingRecordDaoImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/dao/UserDaoImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/dao/UserDaoImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/dao/UserDetailDaoImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/dao/UserDetailDaoImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/entity/Evaluation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/entity/Evaluation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/entity/ShoppingCarPriKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/entity/ShoppingCarPriKey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/entity/ShoppingRecordPriKey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/entity/ShoppingRecordPriKey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/entity/UserDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/entity/UserDetail.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/service/ProductServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/service/ProductServiceImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/service/ShoppingCarServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/service/ShoppingCarServiceImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/service/ShoppingRecordServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/service/ShoppingRecordServiceImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/shopping/service/UserServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/shopping/service/UserServiceImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/controller/DeleteControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/controller/LoginControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/controller/UserInterfaceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/shopping/controller/UserInterfaceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/dao/LoginDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/dao/RegisterDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/dao/UserDetailDaoImplementTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/shopping/dao/UserDetailDaoImplementTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/service/DeleteServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/service/LoginServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/service/RegisterServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/shopping/service/UserDetailServiceImplementTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/shopping/service/UserDetailServiceImplementTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/shopping/dao/UserDaoImplementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/shopping/dao/UserDaoImplementTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,31 +37,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="shopping" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shopping" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shopping" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shopping: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shopping" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shopping: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user_detail: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="shopping" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="shopping: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="user_main: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -142,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+            <state relative-caret-position="137">
+              <caret line="167" column="116" selection-start-line="167" selection-start-column="116" selection-end-line="167" selection-end-column="116" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,18 +57,67 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserInterfaceTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTestTwo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1387">
-              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            <state relative-caret-position="168">
+              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding>
-                <element signature="e#7522#8541#0" />
-                <element signature="e#8547#9401#0" />
-                <element signature="e#9407#10265#0" />
-                <element signature="e#10271#11135#0" />
-                <element signature="e#12421#12968#0" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/dao/UserDaoImplementTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="method#init#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_GUD_002_02#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_GUD_002_03#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_AUD_001_01#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_AUD_001_03#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_DUD_001_01#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_DUD_001_02#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_DUD_001_03#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_DUD_001_04#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_UUD_001_01#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_UUD_001_02#0;class#UserDaoImplementTest#0" />
+                <element signature="method#BACK_001_GAUD_001_01#0;class#UserDaoImplementTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/service/UserServiceImplementTestTwo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="798">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -170,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/service/UserServiceImplement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="55" column="32" lean-forward="true" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+            <state relative-caret-position="-743">
+              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#755#756#0" expanded="true" />
@@ -188,24 +143,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="996">
-              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+            <state relative-caret-position="120">
+              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://bec86ccd-ba77-47e1-931e-e3fd0da0ac76/schema/shopping/table/user_main">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="6e95dddc-308a-4a86-890d-f48c59904e9c">
-              <filtering>
-                <filter text="" />
-              </filtering>
             </state>
           </provider>
         </entry>
@@ -234,10 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/properties/database.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/com/shopping/service/UserServiceImplementTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/Checkstyle.xm;.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/Checkstyle.xml" />
@@ -260,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/ShoppingRecordDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/EvaluationDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDetailDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDetailDaoImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/entity/Evaluation.java" />
@@ -283,8 +222,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/service/UserDetailServiceImplement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/shopping/service/UserServiceImplement.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/shopping/controller/UserController.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerInterTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/shopping/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTestTwo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shopping/dao/UserDaoImplementTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/shopping/service/UserServiceImplementTestTwo.java" />
       </list>
     </option>
   </component>
@@ -323,19 +267,20 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="35" />
-    <option name="y" value="125" />
-    <option name="width" value="1920" />
-    <option name="height" value="1020" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -394,6 +339,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -436,11 +390,31 @@
               <item name="shopping" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shopping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="shopping" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -448,11 +422,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560789033478" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562040147019" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/checkstyle.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -466,17 +440,21 @@
       <recent name="com.shopping.dao" />
       <recent name="com.shopping.controller" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\webapp\WEB-INF" />
-      <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\java" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shopping.service" />
+      <recent name="com.shopping.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\webapp\WEB-INF\classs" />
       <recent name="E:\PCQQ\记录\1091246253\FileRecv\项目源码\项目源码\src\main\webapp" />
       <recent name="E:\学习资料\Software_Testing_by_Fan_Hongfei\project\Shopping-master\Shopping-master\src\main\webapp\static\img" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\webapp\WEB-INF" />
+      <recent name="F:\Tongji Universerty\2018-20192ndTerm\软件测试\shopping\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -542,7 +520,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.shopping.controller" />
       <option name="MAIN_CLASS_NAME" value="com.shopping.controller.UserInterfaceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -637,12 +614,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat-1" />
       <item itemvalue="JUnit.UserDetailServiceImplementTest.BACK_001_UUDS_001_03" />
       <item itemvalue="JUnit.UserDetailServiceImplementTest.BACK_001_GAUDS_001_01" />
       <item itemvalue="JUnit.All in shopping" />
       <item itemvalue="JUnit.UserInterfaceTest" />
       <item itemvalue="JUnit.UserInterfaceTest.INTER_001_DUUC_001_06" />
+      <item itemvalue="Tomcat Server.Tomcat-1" />
     </list>
     <recent_temporary>
       <list>
@@ -680,6 +657,8 @@
       <workItem from="1561942448024" duration="40655000" />
       <workItem from="1562000612639" duration="18000" />
       <workItem from="1562024610103" duration="10814000" />
+      <workItem from="1562037448386" duration="468000" />
+      <workItem from="1562038009144" duration="2117000" />
     </task>
     <servers />
   </component>
@@ -716,13 +695,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118256000" />
+    <option name="totallyTimeSpent" value="120841000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="762" y="0" width="781" height="830" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19034852" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.041493777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -756,7 +734,7 @@
       <window_info anchor="right" id="JSF" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="CDI" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.16957104" />
+      <window_info anchor="right" id="Database" order="8" weight="0.34993085" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
       <window_info anchor="right" id="Bean Validation" order="11" />
@@ -766,25 +744,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classs/login_jsp.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classs/login_jsp.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="148" column="25" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/service/UserServiceImplementTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="99" column="13" lean-forward="true" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/Shopping.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -792,13 +751,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/LoginControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/LoginControllerTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/dao/UserDetailDaoImplementTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-349">
@@ -822,13 +775,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://bec86ccd-ba77-47e1-931e-e3fd0da0ac76/schema/shopping/table/user_detail">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="6e95dddc-308a-4a86-890d-f48c59904e9c">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://bec86ccd-ba77-47e1-931e-e3fd0da0ac76/schema/shopping/table/user_detail" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/service/UserDetailServiceImplementTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1017,20 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/entity/ShoppingRecordPriKey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1132,13 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/utils/Response.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1146,20 +1072,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTest.java">
+    <entry file="das://bec86ccd-ba77-47e1-931e-e3fd0da0ac76/schema/shopping/table/user_main" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserInterfaceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        <state relative-caret-position="1387">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#7522#8541#0" />
+            <element signature="e#8547#9401#0" />
+            <element signature="e#9407#10265#0" />
+            <element signature="e#10271#11135#0" />
+            <element signature="e#12421#12968#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="103" column="34" lean-forward="true" selection-start-line="103" selection-start-column="34" selection-end-line="103" selection-end-column="34" />
+        <state relative-caret-position="378">
+          <caret line="127" column="16" lean-forward="true" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1168,15 +1109,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="361">
           <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/service/UserServiceImplement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="55" column="32" lean-forward="true" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+        <state relative-caret-position="-743">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#755#756#0" expanded="true" />
@@ -1191,36 +1139,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/dao/UserDaoImplement.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="996">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+        <state relative-caret-position="798">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="das://bec86ccd-ba77-47e1-931e-e3fd0da0ac76/schema/shopping/table/user_main">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="6e95dddc-308a-4a86-890d-f48c59904e9c">
-          <filtering>
-            <filter text="" />
-          </filtering>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerInterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1214">
+          <caret line="203" column="40" lean-forward="true" selection-start-line="203" selection-start-column="40" selection-end-line="203" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserInterfaceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/shopping/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="137">
+          <caret line="167" column="116" selection-start-line="167" selection-start-column="116" selection-end-line="167" selection-end-column="116" />
           <folding>
-            <element signature="e#7522#8541#0" />
-            <element signature="e#8547#9401#0" />
-            <element signature="e#9407#10265#0" />
-            <element signature="e#10271#11135#0" />
-            <element signature="e#12421#12968#0" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/controller/UserControllerTestTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/dao/UserDaoImplementTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="method#init#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_GUD_002_02#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_GUD_002_03#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_AUD_001_01#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_AUD_001_03#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_DUD_001_01#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_DUD_001_02#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_DUD_001_03#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_DUD_001_04#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_UUD_001_01#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_UUD_001_02#0;class#UserDaoImplementTest#0" />
+            <element signature="method#BACK_001_GAUD_001_01#0;class#UserDaoImplementTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/shopping/service/UserServiceImplementTestTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
         </state>
       </provider>
     </entry>
