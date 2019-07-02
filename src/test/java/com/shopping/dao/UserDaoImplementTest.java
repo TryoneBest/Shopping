@@ -161,7 +161,7 @@ public class UserDaoImplementTest {
     @Test
     public void BACK_001_DUD_001_03() {
         UserDaoImplement userDaoImplement = new UserDaoImplement();
-        int id = 6;
+        int id = 2;
         try {
             assertTrue(userDao.deleteUser(id));
             System.out.println("success");
